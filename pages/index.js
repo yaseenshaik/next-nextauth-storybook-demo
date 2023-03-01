@@ -1,7 +1,10 @@
 import { Links } from 'components/Links'
 import Head from 'next/head'
+import { useSession } from 'next-auth/react'
 
 export default function Home() {
+  const { data: session, status } = useSession()
+
   return (
     <div>
       <Head>
@@ -13,6 +16,7 @@ export default function Home() {
         <h1>
           Click on any one of these links to see supported features in action
         </h1>
+        <h2>{status === 'authenticated' ? 'Logged In' : 'Unauthenticated'}</h2>
         <Links />
       </main>
     </div>

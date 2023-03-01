@@ -7,6 +7,7 @@ module.exports = {
     '@storybook/addon-links',
     '@storybook/addon-essentials',
     'storybook-addon-next',
+    '@tomfreudenberg/next-auth-mock/storybook'
   ],
   framework: '@storybook/react',
   core: {
